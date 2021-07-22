@@ -1,0 +1,29 @@
+@value font, accent-color, hover-color from '../../variables.module.css';
+
+.button {
+  padding: 5px 15px;
+
+  font-family: font;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  border: none;
+  border-radius: 4px;
+  background-color: accent-color;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: hover-color;
+  transform: scale(1.03);
+}
+
+.button:active {
+  color: accent-color;
+  border: 1px solid accent-color;
+}
+
+.button:not(:last-of-type) {
+  margin-right: 10px;
+}

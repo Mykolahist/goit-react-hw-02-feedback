@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ onLeaveFeedback, options }) => (
-  <>
+  <div className={styles.container}>
     {options.map(option => (
       <button
         type="button"
@@ -14,7 +14,7 @@ const FeedbackOptions = ({ onLeaveFeedback, options }) => (
         {option}
       </button>
     ))}
-  </>
+  </div>
 );
 
 FeedbackOptions.propTypes = {

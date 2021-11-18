@@ -12,8 +12,8 @@ class App extends Component {
     bad: 0,
   };
 
-  leaveFeedback = e => {
-    const { value } = e.currentTarget;
+  leaveFeedback = index => {
+    const { value } = index.currentTarget;
 
     this.setState(prevState => ({
       [value]: prevState[value] + 1,
@@ -38,8 +38,8 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
     const options = Object.keys(this.state);
 
-    const positivePercentage = this.countPositiveFeedbackPercentage();
     const total = this.countTotalFeedback();
+    const positivePercentage = this.countPositiveFeedbackPercentage();
 
     return (
       <Section title="Please leave feedback">
@@ -49,7 +49,7 @@ class App extends Component {
         />
 
         {good + neutral + bad === 0 && (
-          <Notification message="No feedback given"></Notification>
+          <Notification message="No feedback given" />
         )}
 
         {good + neutral + bad > 0 && (

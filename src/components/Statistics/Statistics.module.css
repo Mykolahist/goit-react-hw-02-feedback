@@ -1,17 +1,15 @@
 @value font from '../../variables.module.css';
 
 .title {
+  margin-left: 65px;
   font-family: font;
-  font-size: 26px;
+  color: blue;
 }
 
-.stat {
-  margin: 0;
-
+.item {
+  margin-left: 65px;
+  margin-bottom: 10px;
   font-family: font;
   font-size: 20px;
-}
-
-.stat:not(:last-of-type) {
-  margin-bottom: 10px;
+  font-weight: 700;
 }

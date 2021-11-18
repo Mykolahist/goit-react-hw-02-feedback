@@ -1,6 +1,8 @@
 @value font from '../../variables.module.css';
 
 .message {
-  font-family: font;
-  font-size: 26px;
+  text-align: center;
+  font-family: 'Courier Prime', monospace;
+  font-size: 30px;
+  font-weight: 500;
 }
